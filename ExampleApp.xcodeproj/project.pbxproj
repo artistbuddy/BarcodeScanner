@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C12539A239307D0004D98AA /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C125399239307D0004D98AA /* BarcodeView.swift */; };
 		7C52F9882391B674006447E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52F9872391B674006447E9 /* AppDelegate.swift */; };
 		7C52F98A2391B674006447E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52F9892391B674006447E9 /* SceneDelegate.swift */; };
 		7C52F98C2391B674006447E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52F98B2391B674006447E9 /* ContentView.swift */; };
@@ -15,7 +16,6 @@
 		7C52F9942391B677006447E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C52F9922391B677006447E9 /* LaunchScreen.storyboard */; };
 		7C52F99D2391B691006447E9 /* BarcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C52F99C2391B691006447E9 /* BarcodeKit.framework */; };
 		7C52F99E2391B691006447E9 /* BarcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C52F99C2391B691006447E9 /* BarcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7C52F9A32391D14F006447E9 /* ViedoOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52F9A22391D14F006447E9 /* ViedoOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C125399239307D0004D98AA /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
 		7C52F9842391B674006447E9 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C52F9872391B674006447E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C52F9892391B674006447E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		7C52F9932391B677006447E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C52F9952391B677006447E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C52F99C2391B691006447E9 /* BarcodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BarcodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C52F9A22391D14F006447E9 /* ViedoOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViedoOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				7C52F9872391B674006447E9 /* AppDelegate.swift */,
 				7C52F9892391B674006447E9 /* SceneDelegate.swift */,
 				7C52F98B2391B674006447E9 /* ContentView.swift */,
-				7C52F9A22391D14F006447E9 /* ViedoOutput.swift */,
+				7C125399239307D0004D98AA /* BarcodeView.swift */,
 				7C52F98D2391B677006447E9 /* Assets.xcassets */,
 				7C52F9922391B677006447E9 /* LaunchScreen.storyboard */,
 				7C52F9952391B677006447E9 /* Info.plist */,
@@ -177,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C52F9A32391D14F006447E9 /* ViedoOutput.swift in Sources */,
+				7C12539A239307D0004D98AA /* BarcodeView.swift in Sources */,
 				7C52F9882391B674006447E9 /* AppDelegate.swift in Sources */,
 				7C52F98A2391B674006447E9 /* SceneDelegate.swift in Sources */,
 				7C52F98C2391B674006447E9 /* ContentView.swift in Sources */,
