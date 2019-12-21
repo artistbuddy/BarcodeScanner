@@ -10,20 +10,16 @@ import SwiftUI
 import BarcodeKit
 
 struct ContentView: View {
-    let scanner: BarcodeScanner
+    let scanner = BarcodeScanner(config: .default)
     
     var body: some View {
         ZStack {
             BarcodeScannerCamera()
-                .environmentObject(scanner.status)
-                .environmentObject(scanner.preview)
                 .onAppear(perform: {
                     self.scanner.core.startScanning()
                 })
-            
             BarcodeView()
-                .environmentObject(scanner.output)
         }
-        
+        .barcodeKit(scanner)
     }
 }

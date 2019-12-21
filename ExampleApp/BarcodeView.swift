@@ -14,6 +14,7 @@ struct BarcodeView: View {
     
     var body: some View {
         Text(scannerOutput.barcodes.last?.value ?? "no barcode")
+            .font(.system(.headline))
             .padding(10)
             .background(Color.gray.opacity(0.5))
     }
