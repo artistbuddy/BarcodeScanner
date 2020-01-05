@@ -10,10 +10,10 @@ import SwiftUI
 import BarcodeKit
 
 struct BarcodeView: View {
-    @EnvironmentObject var scannerOutput: BarcodeScannerOutput
+    @Binding var barcode: String
     
     var body: some View {
-        Text(scannerOutput.barcodes.last?.value ?? "no barcode")
+        Text(barcode)
             .font(.system(.headline))
             .padding(10)
             .background(Color.gray.opacity(0.5))

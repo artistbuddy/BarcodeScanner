@@ -10,16 +10,34 @@ import SwiftUI
 import BarcodeKit
 
 struct ContentView: View {
-    let scanner = BarcodeScanner(config: .default)
+    private let viewModel = ViewModel()
+    @State private var state = BarcodeScannerState.failure(reason: "")
+    @State private var barcode = ""
+    
     
     var body: some View {
         ZStack {
-            BarcodeScannerCamera()
-                .onAppear(perform: {
-                    self.scanner.core.startScanning()
+            BarcodeScannerCamera(state: $state)
+                .onReceive(viewModel.scanner.status.$isScanning, perform: {
+                    let scanning = BarcodeScannerState.scanning(videoPreview: self.viewModel.scanner.preview.videoOutput)
+                    let failure = BarcodeScannerState.failure(reason: "no preview available")
+                    self.state = $0 ? scanning : failure
                 })
-            BarcodeView()
+            
+            BarcodeView(barcode: $barcode)
+                .onReceive(viewModel.scanner.output.$barcodes.map{ $0.last?.value ?? "no barcode" }, perform: {
+                    self.barcode = $0
+                })
         }
-        .barcodeKit(scanner)
+    }
+}
+
+fileprivate extension ContentView {
+    class ViewModel: ObservableObject {
+        let scanner = BarcodeScanner(config: .default)
+        
+        init() {
+            scanner.core.startScanning()
+        }
     }
 }
